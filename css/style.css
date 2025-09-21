@@ -1,0 +1,186 @@
+body {
+  background-image: url('https://picsum.photos/1200/800');
+}
+
+/* Base Styles & Typography */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; background: #121212; color: #eee; scroll-behavior: smooth; }
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+.main-nav { background: #1a1a1a; padding: 30px 20px; box-shadow: 2px 0 10px rgba(0,0,0,0.5); position: fixed; top: 0; left: 0; height: 100vh; width: 280px; z-index: 1000; display: flex; flex-direction: column; align-items: center; color: #fff; }
+.main-nav .profile-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff9800; margin-bottom: 20px; }
+.main-nav .logo-area { text-align: center; margin-bottom: 25px; }
+.main-nav .logo { font-size: 1.8em; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+.main-nav .professional-badge { display: flex; align-items: center; gap: 8px; font-size: 0.9em; color: #888; }
+.main-nav .professional-badge i { color: #ff9800; }
+.nav-menu { list-style: none; display: flex; flex-direction: column; gap: 15px; width: 100%; margin-top: 30px; }
+.nav-menu li a { font-weight: 600; color: #bbb; display: flex; align-items: center; gap: 15px; padding: 12px 20px; border-radius: 8px; transition: all 0.3s ease; font-size: 1.1em; }
+.nav-menu li a:hover, .nav-menu li a.active { background-color: rgba(255, 152, 0, 0.15); color: #ff9800; transform: translateX(5px); }
+.hamburger { display: none; cursor: pointer; font-size: 1.8em; }
+
+/* Main Content */
+.content { margin-left: 280px; }
+
+/* Hero */
+.hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://picsum.photos/1200/800') no-repeat center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
+.hero h1 { font-size: 3.5em; margin-bottom: 10px; font-weight: 700; }
+.hero h1 span { color: #ff9800; }
+.hero p { font-size: 1.2em; max-width: 600px; margin-bottom: 30px; }
+.hero .cta-btn { display: inline-block; padding: 14px 32px; background: #ff9800; color: #fff; border-radius: 50px; font-weight: 600; box-shadow: 0 6px 12px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+.hero .cta-btn:hover { background: #e68a00; transform: translateY(-3px); }
+
+/* Sections */
+.section { padding: 80px 20px; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.section.visible { opacity: 1; transform: translateY(0); }
+.section h2 { text-align: center; margin-bottom: 50px; font-size: 2.5em; color: #eee; position: relative; }
+.section h2::after { content: ""; width: 70px; height: 4px; background: #ff9800; display: block; margin: 15px auto 0; border-radius: 2px; }
+
+.about-content { display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; }
+.about-content img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid #ff9800; box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.about-content p { max-width: 700px; font-size: 1.1em; line-height: 1.8; }
+
+/* Grid Cards */
+.services-grid, .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.service-card, .project {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    color: #eee;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.service-card:hover { transform: translateY(-10px) scale(1.03); box-shadow: 20px 40px rgba(0,0,0,0.3); filter: brightness(1.05); }
+.project:hover { transform: translateY(-8px) scale(1.02) rotate(-1deg); box-shadow: 0 18px 36px rgba(0,0,0,0.25); filter: brightness(1.05); }
+.service-card h3, .project h3 { margin-bottom: 15px; font-size: 1.6em; color: #ff9800; letter-spacing: 1px; }
+.project img { width: 100%; border-radius: 12px; }
+
+/* Forms */
+form { max-width: 650px; margin: auto; display: flex; flex-direction: column; gap: 18px; padding: 20px; background: #1e1e1e; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+form input, form textarea { padding: 15px; border: 1px solid #3a3a3a; border-radius: 10px; font-size: 1em; background: #2c2c2c; color: #eee; }
+form input::placeholder, form textarea::placeholder { color: #999; }
+form button { padding: 15px; background: #ff9800; color: #fff; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+form button:hover { background: #e68a00; transform: translateY(-3px); }
+#form-status { font-weight: bold; text-align: center; margin-top: 10px; color: #32cd32; }
+
+/* Footer */
+footer { background: #0d0d0d; color: #fff; text-align: center; padding: 25px; font-size: 0.95em; letter-spacing: 0.5px; }
+
+/* Hero letters */
+.letter-animation { display: inline-block; opacity: 0; transform: translateY(20px); animation: fadeUp 0.6s forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Initial state for reveal */
+.section, .project, .service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+/* Reveal state */
+.section.visible, .project.visible, .service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* Mobile First Design */
+/* ---------------------------------------------------------------------------------- */
+
+/* Default styles for mobile screens (up to 767px) - These are the base styles */
+/* The existing code already handles this, but here it is for clarity. */
+@media (max-width: 767px) {
+    /* Navbar for mobile */
+    .main-nav {
+        position: relative;
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+    .main-nav .profile-img, .main-nav .professional-badge {
+        display: none;
+    }
+    .main-nav .logo-area {
+        margin-bottom: 0;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu li a {
+        text-align: left;
+        padding-left: 30px;
+    }
+    .content {
+        margin-left: 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    .grid, .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* Tablet Screen Styles */
+/* ---------------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-nav {
+        width: 200px; /* Adjust sidebar width for tablets */
+    }
+    .content {
+        margin-left: 200px; /* Match content margin to navbar width */
+    }
+    .hero h1 {
+        font-size: 2.8em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .services-grid, .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* Large Screen Styles */
+/* ---------------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+    /* Revert to the original desktop styles */
+    .main-nav {
+        width: 280px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-nav .profile-img, .main-nav .professional-badge {
+        display: block; /* Show profile image and badge on large screens */
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        margin-left: 280px;
+    }
+    .hamburger {
+        display: none;
+    }
+}

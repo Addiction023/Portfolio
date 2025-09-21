@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atul Patel - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+  <img src="Logo.jpeg" alt="Profile Picture" class="profile-img">
+  <div class="logo-area">
+    <p class="logo">Atul Patel</p>
+    <div class="professional-badge"><i class="fas fa-certificate"></i> Professional Partner</div>
+  </div>
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="#hero" class="active"><i class="fas fa-mug-hot"></i> Home</a></li>
+    <li><a href="#projects"><i class="fas fa-database"></i> Projects</a></li>
+    <li><a href="#services"><i class="fas fa-clipboard-list"></i> Services</a></li>
+    <li><a href="#contact"><i class="fas fa-box"></i> Contact</a></li>
+    <li><a href="#about"><i class="fas fa-at"></i> About</a></li>
+  </ul>
+  <div class="hamburger"><i class="fas fa-bars"></i></div>
+</nav>
+
+<div class="content">
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <h1 id="hero-text">Hi, I'm <span class="highlight">Atul Patel</span></h1>
+      <p>A Web Developer & Designer</p>
+      <a href="#projects" class="cta-btn">View My Work</a>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="grid">
+      <div class="project"><img src="project1.jpg" alt="Project 1"><h3>Project 1</h3></div>
+      <div class="project"><img src="project2.jpg" alt="Project 2"><h3>Project 2</h3></div>
+      <div class="project"><img src="project3.jpg" alt="Project 3"><h3>Project 3</h3></div>
+      <div class="project"><img src="project4.jpg" alt="Project 4"><h3>Project 4</h3></div>
+      <div class="project"><img src="project5.jpg" alt="Project 5"><h3>Project 5</h3></div>
+      <div class="project"><img src="project6.jpg" alt="Project 6"><h3>Project 6</h3></div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2>My Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Building modern, responsive, and high-performance websites from the ground up.</p>
+      </div>
+      <div class="service-card">
+        <h3>UI/UX Design</h3>
+        <p>Creating intuitive and engaging user interfaces that provide seamless user experiences.</p>
+      </div>
+      <div class="service-card">
+        <h3>SEO & Performance</h3>
+        <p>Optimizing websites for better search engine visibility and faster loading times.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="#" method="post">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <div id="form-status"></div>
+    </form>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="Logo.jpeg" alt="Profile Picture">
+      <p>Hello! I am a passionate web developer with a knack for creating beautiful, responsive, and user-friendly websites. My expertise lies in front-end development, where I bring designs to life using HTML, CSS, and JavaScript. I am dedicated to crafting clean, efficient code and love the challenge of solving complex problems. When I'm not coding, I enjoy learning about new technologies and contributing to open-source projects. Let's build something great together!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Atul Patel. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
